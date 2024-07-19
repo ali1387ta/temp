@@ -24,3 +24,9 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+@layer components {
+  ::selection {
+    @apply bg-primary-500;
+  }
+}

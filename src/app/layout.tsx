@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local"
 import "./globals.css";
 import AppBar from "@/components/app-bar/app-bar";
 
-const inter = Inter({ subsets: ["latin"] });
+const switzer = localFont({src:"../../public/fonts/Switzer-Variable.woff2"})
 
 export const metadata: Metadata = {
   title: "Ducks",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " bg-body min-h-screen flex justify-center"}>
+      <body className={switzer.className + " bg-body min-h-screen flex justify-center"}>
         {children}
         <AppBar />
       </body>
