@@ -14,7 +14,7 @@ const AppBarItem = ({ icon, lable, href }: { icon: React.ReactElement; lable: st
 
   return (
     <Link href={href} className="flex grow flex-col items-center justify-center gap-2">
-      <span className={"transition-all " + (isActive ? "text-primary" : "text-zinc-500")}>{icon}</span>
+      <span className={"transition-all " + (isActive ? "text-primary-500" : "text-zinc-500")}>{icon}</span>
       <p className={"text-sm font-bold " + (isActive ? "" : "hidden")}>{lable}</p>
     </Link>
   );

@@ -11,7 +11,7 @@ const AppBar = () => {
       <AppBarItem icon={<HomeSvg/>} lable="Home" href="/" />
       <AppBarItem icon={<LeaderboardSvg/>} lable="Leaderboard" href="/leaderboard" />
       <AppBarItem icon={<LaunchPoolSvg/>} lable="Launchpool" href="/launchpool" />
-      <AppBarItem icon={<MissionsSvg/>} lable="Earns" href="/Missions" />
+      <AppBarItem icon={<MissionsSvg/>} lable="Earns" href="/missions" />
       <AppBarItem icon={<FriendsSvg/>} lable="Friends" href="/friends" />
     </nav>
   );
