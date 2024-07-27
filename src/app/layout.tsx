@@ -3,7 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "react-toastify/ReactToastify.min.css";
 import AppBar from "@/components/app-bar/app-bar";
-import { ToastContainer } from "react-toastify";
+import { UserContextProvider } from "@/contexts/user-context";
+import Toast from "@/components/Toast";
 
 const switzer = localFont({ src: "../../public/fonts/Switzer-Variable.woff2" });
 
@@ -20,12 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={switzer.className + " flex min-h-screen justify-center bg-body"}>
-        <ToastContainer
-          hideProgressBar={true}
-          toastStyle={{ border: "1px solid #27272a", boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.14)" }}
-        />
-        {children}
-        <AppBar />
+        <Toast />
+        <UserContextProvider>
+          {children}
+          <AppBar />
+        </UserContextProvider>
       </body>
     </html>
   );

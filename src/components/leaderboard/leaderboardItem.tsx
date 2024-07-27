@@ -10,13 +10,19 @@ const LeaderBoardItem = ({
   name: string;
   balance: number;
   rank: number;
-  photo: string;
+  photo: string | null | undefined;
 }) => {
   return (
     <div className="flex items-center justify-between rounded-lg border border-[#27272a] bg-secondary px-4 py-2.5">
       <div className="flex items-center gap-2.5">
         <div>
-          <Image alt="profile" src={photo} width={160} height={160} className="size-11 rounded-full" />
+          <Image
+            alt="profile"
+            src={photo ? photo : "/images/logo.png"}
+            width={88}
+            height={88}
+            className="size-11 rounded-full"
+          />
         </div>
         <div>
           <p className="line-clamp-1 text-ellipsis break-all text-sm font-bold">{name}</p>
@@ -25,7 +31,11 @@ const LeaderBoardItem = ({
       </div>
       <div className="font-bold">
         {rank > 3 ? (
-          `#${rank}`
+          rank <= 100 ? (
+            `#${rank}`
+          ) : (
+            "+100"
+          )
         ) : (
           <Image alt="rank" src={`/icons/rank-${rank}.png`} width={130} height={130} className="size-9" />
         )}

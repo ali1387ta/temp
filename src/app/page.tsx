@@ -1,10 +1,8 @@
+import Balance from "@/components/home/balance";
 import CommunityItem from "@/components/home/community-item";
-import Reward from "@/components/home/reward";
-import CalenderSvg from "@/components/svgs/calender.svg";
+import Rewards from "@/components/home/rewards";
 import KingSvg from "@/components/svgs/king.svg";
-import PeopleSvg from "@/components/svgs/people.svg";
 import StarSvg from "@/components/svgs/star.svg";
-import TickSvg from "@/components/svgs/tick.svg";
 import WorldSvg from "@/components/svgs/world.svg";
 import Image from "next/image";
 
@@ -17,13 +15,13 @@ export default function Home() {
           <span className="text-primary">
             <KingSvg />
           </span>
-          <p className="font-bold group-hover:text-primary">&DUMP Price</p>
+          <p className="font-bold group-hover:text-primary-500">&DUMP Price</p>
         </button>
         <button className="group flex items-center gap-2 rounded-3xl border border-[#ffc81280] px-3 py-1">
-          <span className="text-primary">
+          <span className="text-primary-500">
             <WorldSvg />
           </span>
-          <p className="text-base font-bold transition-all group-hover:text-primary">Vote Exchange</p>
+          <p className="text-base font-bold transition-all group-hover:text-primary-500">Vote Exchange</p>
           <span className="animate-pulse text-purple-500">
             <StarSvg height={13} width={13} />
           </span>
@@ -46,7 +44,7 @@ export default function Home() {
         {/* icon and balance */}
         <div className="h-200 flex flex-col items-center gap-6 py-6">
           <Image alt="logo" src={"/images/logo.png"} width={96} height={85} />
-          <p className="text text-[28px] font-bold">10,190 DUCKS</p>
+          <Balance />
         </div>
 
         {/* community items */}
@@ -57,12 +55,7 @@ export default function Home() {
         </div>
 
         {/* rewards */}
-        <div className="mt-4 space-y-2">
-          <p className="mb-1 text-base font-medium">Your Rewards</p>
-          <Reward icon={<CalenderSvg />} lable="Account Age" amount="+10,190 DUCKS" />
-          <Reward icon={<TickSvg />} lable="Telegram Premium" amount="+0 DUCKS" />
-          <Reward icon={<PeopleSvg />} lable="Invited Friends" amount="+0 DUCKS" />
-        </div>
+        <Rewards />
       </div>
     </main>
   );

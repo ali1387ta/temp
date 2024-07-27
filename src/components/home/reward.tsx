@@ -1,11 +1,13 @@
-const Reward = ({ icon, lable, amount }: { icon: React.ReactElement; lable: string; amount: string }) => {
+import { formatNumber } from "@/utils/format-number";
+
+const Reward = ({ icon, lable, amount }: { icon: React.ReactElement; lable: string; amount: number }) => {
   return (
-    <div className="rounded-lg bg-secondary border border-[#27272a] px-3 py-2.5 flex justify-between items-center">
+    <div className="flex items-center justify-between rounded-lg border border-[#27272a] bg-secondary px-3 py-2.5">
       <div className="flex items-center gap-2.5">
-        <div className="bg-zinc-800 rounded-full size-11 flex justify-center items-center">{icon}</div>
+        <div className="flex size-11 items-center justify-center rounded-full bg-zinc-800">{icon}</div>
         <p className="text-base">{lable}</p>
       </div>
-      <div className="text-base font-medium">{amount}</div>
+      <div className="text-base font-medium">+{formatNumber(amount)} DUCKS</div>
     </div>
   );
 };

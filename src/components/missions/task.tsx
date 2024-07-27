@@ -9,7 +9,7 @@ const Task = ({ icon, lable, reward }: { icon: string; lable: string; reward: nu
           <Image alt="icon" src={icon} width={1000} height={1000} className="size-8" />
           <p className="text-sm">{lable}</p>
         </div>
-        <button className="text-sm bg-primary-500 hover:bg-primary-600 flex h-8 items-center gap-1 rounded-full px-3 font-medium text-black transition-[all_0.2s_cubic-bezier(0.645,0.045,0.355,1)] active:scale-95">
+        <button className="flex h-8 items-center gap-1 rounded-full bg-primary-500 px-3 text-sm font-medium text-black transition-[all_0.2s_cubic-bezier(0.645,0.045,0.355,1)] hover:bg-primary-600 active:scale-95">
           Go
           <ArrowRightSvg width={14} height={14} />
         </button>

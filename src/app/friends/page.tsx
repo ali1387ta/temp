@@ -11,7 +11,6 @@ const Friends = () => {
         <p className="text-sm font-bold capitalize">Success</p>
         <p className="text-xs font-medium text-[#C8C5C5]">Copy to clipboard successfully</p>
       </div>,
-      { theme: "dark" },
     );
   };
 
@@ -30,8 +29,8 @@ const Friends = () => {
       </div>
 
       {/* invite button */}
-      <div className="fixed bottom-[82px] flex w-full items-center gap-2 px-4 pb-4 max-w-screen-md">
-        <button className="bg-primary-500 hover:bg-primary-600 h-12 grow rounded-full text-lg font-medium text-black transition-[all_0.2s_cubic-bezier(0.645,0.045,0.355,1)] active:scale-95">
+      <div className="fixed bottom-[82px] flex w-full max-w-screen-md items-center gap-2 px-4 pb-4">
+        <button className="h-12 grow rounded-full bg-primary-500 text-lg font-medium text-black transition-[all_0.2s_cubic-bezier(0.645,0.045,0.355,1)] hover:bg-primary-600 active:scale-95">
           Invite friends
         </button>
         <button

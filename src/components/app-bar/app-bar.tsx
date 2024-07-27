@@ -7,12 +7,12 @@ import FriendsSvg from "../svgs/friends.svg";
 
 const AppBar = () => {
   return (
-    <nav className="w-full max-w-screen-md bg-secondary bg- h-[72px] fixed bottom-0 flex">
-      <AppBarItem icon={<HomeSvg/>} lable="Home" href="/" />
-      <AppBarItem icon={<LeaderboardSvg/>} lable="Leaderboard" href="/leaderboard" />
-      <AppBarItem icon={<LaunchPoolSvg/>} lable="Launchpool" href="/launchpool" />
-      <AppBarItem icon={<MissionsSvg/>} lable="Earns" href="/missions" />
-      <AppBarItem icon={<FriendsSvg/>} lable="Friends" href="/friends" />
+    <nav className="bg- fixed bottom-0 flex h-[72px] w-full max-w-screen-md bg-secondary">
+      <AppBarItem icon={<HomeSvg />} lable="Home" href="/" />
+      <AppBarItem icon={<LeaderboardSvg />} lable="Leaderboard" href="/leaderboard" />
+      <AppBarItem icon={<LaunchPoolSvg />} lable="Launchpool" href="/launchpool" />
+      <AppBarItem icon={<MissionsSvg />} lable="Earns" href="/missions" />
+      <AppBarItem icon={<FriendsSvg />} lable="Friends" href="/friends" />
     </nav>
   );
 };
