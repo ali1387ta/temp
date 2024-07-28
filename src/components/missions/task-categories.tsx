@@ -5,15 +5,17 @@ import CompletedTask from "./completed-task";
 import Task from "./task";
 import TaskCategory from "./task-category";
 import { useForceUpdate } from "@/hooks/use-force-update";
+import { User } from "@/types";
 
 const TaskCategories = () => {
   const [user] = useUserContext();
   const forceUpdate = useForceUpdate();
-  user.taskCategories.shift();
+  const shifted = JSON.parse(JSON.stringify(user)) as User;
+  shifted.taskCategories.shift();
 
   return (
     <div className="flex flex-col gap-4">
-      {user.taskCategories.map((category, index) => (
+      {shifted.taskCategories.map((category, index) => (
         <TaskCategory lable={category.name} key={index} icon={`/images/task-categories/${category.icon}`}>
           {category.tasks.map((task) => {
             if (task.expired) {

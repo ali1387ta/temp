@@ -3,9 +3,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "3000",
+        protocol: "https",
+        hostname: "fb3rfbdw-3000.euw.devtunnels.ms",
+        // port: "80",
         pathname: "/**"
       },
     ],
