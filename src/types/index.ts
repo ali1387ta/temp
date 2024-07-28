@@ -8,6 +8,12 @@ export type Task = {
   completed: boolean;
 };
 
+export type Exchange = {
+  exchangeId: number;
+  name: string;
+  icon: string;
+};
+
 export type User = {
   userId: number;
   name: string;
@@ -22,10 +28,7 @@ export type User = {
     balance: string;
     telegramId: string;
   }[];
-  exchange: {
-    exchangeId: number;
-    name: string;
-  };
+  exchange?: Exchange;
   taskCategories: {
     name: string;
     icon: string;

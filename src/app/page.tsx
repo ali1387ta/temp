@@ -5,6 +5,7 @@ import KingSvg from "@/components/svgs/king.svg";
 import StarSvg from "@/components/svgs/star.svg";
 import WorldSvg from "@/components/svgs/world.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,7 +18,10 @@ export default function Home() {
           </span>
           <p className="font-bold group-hover:text-primary-500">&DUMP Price</p>
         </button>
-        <button className="group flex items-center gap-2 rounded-3xl border border-[#ffc81280] px-3 py-1">
+        <Link
+          href="/exchange"
+          className="group flex items-center gap-2 rounded-3xl border border-[#ffc81280] px-3 py-1"
+        >
           <span className="text-primary-500">
             <WorldSvg />
           </span>
@@ -25,7 +29,7 @@ export default function Home() {
           <span className="animate-pulse text-purple-500">
             <StarSvg height={13} width={13} />
           </span>
-        </button>
+        </Link>
       </header>
 
       {/* main content */}
