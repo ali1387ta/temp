@@ -1,5 +1,5 @@
 import Balance from "@/components/home/balance";
-import CommunityItem from "@/components/home/community-item";
+import CommunityItemList from "@/components/home/community-item-list";
 import Rewards from "@/components/home/rewards";
 import KingSvg from "@/components/svgs/king.svg";
 import StarSvg from "@/components/svgs/star.svg";
@@ -31,12 +31,13 @@ export default function Home() {
       {/* main content */}
       <div className="flex w-full grow flex-col pb-[82px] pt-3">
         {/* banner */}
-        <div className="flex h-[115px] justify-center">
+        <div className="flex max-h-[115px] justify-center">
           <Image
             alt="banner"
             src={"/images/banner.png"}
-            width={1000}
-            height={1000}
+            width={0}
+            height={0}
+            sizes="100%"
             className="size-full cursor-pointer rounded-xl transition-all hover:opacity-70"
           />
         </div>
@@ -48,11 +49,7 @@ export default function Home() {
         </div>
 
         {/* community items */}
-        <div className="space-y-3 rounded-2xl bg-zinc-900 p-4">
-          <p className="text-xl font-bold">DUCK Community</p>
-          <CommunityItem lable="Join DuckCoop Channel (+2,500 DUCKS)" />
-          <CommunityItem lable="Join DuckCoop Community (+2,500 DUCKS)" />
-        </div>
+        <CommunityItemList />
 
         {/* rewards */}
         <Rewards />

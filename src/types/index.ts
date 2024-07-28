@@ -1,3 +1,13 @@
+export type Task = {
+  taskId: number;
+  name: string;
+  icon: string;
+  condition: string;
+  reward: number;
+  expired: boolean;
+  completed: boolean;
+};
+
 export type User = {
   userId: number;
   name: string;
@@ -9,6 +19,7 @@ export type User = {
   friends: {
     userId: number;
     name: string;
+    balance: string;
     telegramId: string;
   }[];
   exchange: {
@@ -16,14 +27,9 @@ export type User = {
     name: string;
   };
   taskCategories: {
-    categoryName: string;
-    tasks: {
-      taskId: number;
-      taskName: string;
-      reward: number;
-      expired: boolean;
-      completed: boolean;
-    }[];
+    name: string;
+    icon: string;
+    tasks: Task[];
   }[];
   rewards: {
     accountAge: number;

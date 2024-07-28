@@ -1,19 +1,8 @@
-"use client";
-
-import CopySvg from "@/components/svgs/copy.svg";
+import FriendList from "@/components/friends/friend-list";
+import InviteButton from "@/components/friends/invite-button";
 import Image from "next/image";
-import { toast } from "react-toastify";
 
 const Friends = () => {
-  const copy = () => {
-    toast.success(
-      <div>
-        <p className="text-sm font-bold capitalize">Success</p>
-        <p className="text-xs font-medium text-[#C8C5C5]">Copy to clipboard successfully</p>
-      </div>,
-    );
-  };
-
   return (
     <main className="relative flex min-h-full w-full max-w-screen-md flex-col px-3 pb-[82px] pt-3">
       {/* title */}
@@ -28,18 +17,11 @@ const Friends = () => {
         <p className="text-center text-base text-zinc-400">Tap on the button to invite your friends</p>
       </div>
 
+      {/* friends */}
+      <FriendList />
+
       {/* invite button */}
-      <div className="fixed bottom-[82px] flex w-full max-w-screen-md items-center gap-2 px-4 pb-4">
-        <button className="h-12 grow rounded-full bg-primary-500 text-lg font-medium text-black transition-[all_0.2s_cubic-bezier(0.645,0.045,0.355,1)] hover:bg-primary-600 active:scale-95">
-          Invite friends
-        </button>
-        <button
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 transition-[all_0.2s_cubic-bezier(0.645,0.045,0.355,1)] active:scale-95"
-          onClick={copy}
-        >
-          <CopySvg />
-        </button>
-      </div>
+      <InviteButton />
     </main>
   );
 };

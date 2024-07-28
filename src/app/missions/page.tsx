@@ -1,6 +1,4 @@
-import CompletedTask from "@/components/missions/completed-task";
-import Task from "@/components/missions/task";
-import TaskList from "@/components/missions/task-list";
+import TaskCategories from "@/components/missions/task-categories";
 
 const Missions = () => {
   return (
@@ -11,25 +9,7 @@ const Missions = () => {
       </p>
 
       {/* tasks */}
-      <div className="flex flex-col gap-4 px-4">
-        <TaskList lable="Uniswap" icon="/images/logo.png">
-          <Task lable="Dex" icon="/images/logo.png" reward={2000} />
-          <Task lable="Dex" icon="/images/logo.png" reward={2000} />
-          <CompletedTask lable="Dex" icon="/images/logo.png" />
-        </TaskList>
-        <TaskList lable="Uniswap" icon="/images/logo.png">
-          <CompletedTask lable="Dex" icon="/images/logo.png" />
-        </TaskList>
-        <TaskList lable="Uniswap" icon="/images/logo.png">
-          <Task lable="Dex" icon="/images/logo.png" reward={2000} />
-          <CompletedTask lable="Dex" icon="/images/logo.png" />
-          <Task lable="Dex" icon="/images/logo.png" reward={2000} />
-        </TaskList>
-        <TaskList lable="Uniswap" icon="/images/logo.png">
-          <Task lable="Dex" icon="/images/logo.png" reward={2000} />
-          <Task lable="Dex" icon="/images/logo.png" reward={2000} />
-        </TaskList>
-      </div>
+      <TaskCategories />
     </main>
   );
 };
