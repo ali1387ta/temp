@@ -5,6 +5,7 @@ import "react-toastify/ReactToastify.min.css";
 import AppBar from "@/components/app-bar/app-bar";
 import { UserContextProvider } from "@/contexts/user-context";
 import Toast from "@/components/Toast";
+import Welcome from "@/components/welcome";
 
 const switzer = localFont({ src: "../../public/fonts/Switzer-Variable.woff2" });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={switzer.className + " flex min-h-screen justify-center bg-body"}>
         <Toast />
         <UserContextProvider>
+          <Welcome />
           {children}
           <AppBar />
         </UserContextProvider>
